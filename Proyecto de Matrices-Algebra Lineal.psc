@@ -193,6 +193,65 @@ Algoritmo OperacionesDeMatrices
 							FinPara
 							Escribir "";
 							
+						3:
+							Escribir "********* MULTIPLICACIÓN DE MATRICES *********";
+							Para I3<-1 Hasta fila Hacer
+								c<-1;
+								Mientras c < 3 Hacer
+									suma<-0 ;
+									Para  J3<- 1 Hasta columna Hacer
+										suma<-suma + (matriz1(I3,J3)* matriz2(J3,c));
+									FinPara
+									matrizR(I3,c)<-suma;
+									c<-c+1;
+								FinMientras
+							FinPara
+							
+							Escribir "Matriz Resultante:";
+							Para I3<-1 Hasta fila Hacer
+								Para J3<-1 Hasta columna Hacer
+									Escribir Sin Saltar'[',matrizR[I3,J3],']';
+								FinPara
+								Escribir "";
+							FinPara
+							Escribir "";
+							
+						4:
+							Escribir "********* DIVISIÓN DE MATRICES *********";
+							Escribir "Matriz Resultante:";
+							
+							Para I3<-1 Hasta fila Hacer
+								
+								Para J3<-1 Hasta columna Hacer
+									matrizR[I3,J3]= matriz1[I3,J3] / matriz2[I3,J3];
+									Escribir Sin Saltar'[',matrizR[I3,J3],']';
+								FinPara
+								Escribir "";
+							FinPara
+							Escribir "";
+							
+						5:
+							Escribir "Primera Matriz";											
+							Para I<-1 Hasta fila Hacer
+								
+								Para J<-1 Hasta columna Hacer
+									Escribir Sin Saltar'[',matriz1[I,J],']';
+								FinPara
+								
+								Escribir "";
+							FinPara
+							
+							Escribir "********* MATRIZ TRANSPUESTA *********";
+							Para I<-1 Hasta fila Hacer
+								
+								Para J<-1 Hasta columna Hacer
+									Escribir Sin Saltar'[',matriz1[J,I],']';
+								FinPara
+								
+								Escribir "";
+							FinPara
+							Escribir "";
+							
 						De Otro Modo:
 							Mostrar "Ingrese una opción valida"
 							Mostrar "Presione enter para continuar"
